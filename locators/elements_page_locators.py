@@ -23,21 +23,12 @@ class CheckBoxPageLocators:
     ITEM_LIST = (By.CSS_SELECTOR, "span[class='rct-title']")
     SELECTED_ALL = '//*[@id="result"]/span'
     EXPAND_ALL_BUTTON = (By.XPATH, '//*[@id="tree-node"]/div/button[1]')
-    HOME_FOLDER = '//*[@id="tree-node"]/ol/li/span/label'
-    DESKTOP_FOLDER = '//*[@id="tree-node"]/ol/li/ol/li[1]/span'
-    NOTES_FILE = '//*[@id="tree-node"]/ol/li/ol/li[1]/ol/li[1]'
-    COMMANDS_FILE = '//*[@id="tree-node"]/ol/li/ol/li[1]/ol/li[2]/span'
-    DOCUMENTS_FOLDER = '//*[@id="tree-node"]/ol/li/ol/li[2]/span'
-    WORKSPACE_FOLDER = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/span'
-    REACT_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[1]/span'
-    ANGULAR_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[2]'
-    VEU_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[1]/ol/li[3]/span'
-    OFFICE_FOLDER = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[2]/span'
-    PUBLIC_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[2]/ol/li[1]'
-    PRIVATE_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[2]/ol/li[2]/span'
-    CLASSIFIED_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[2]/ol/li[3]'
-    GENERAL_FILE = '//*[@id="tree-node"]/ol/li/ol/li[2]/ol/li[2]/ol/li[4]'
-    DOWNLOADS_FOLDER = '//*[@id="tree-node"]/ol/li/ol/li[3]/span'
-    WORD_FILE_DOC = '//*[@id="tree-node"]/ol/li/ol/li[3]/ol/li[1]/span'
-    EXCEL_FILE_DOC = '//*[@id="tree-node"]/ol/li/ol/li[3]/ol/li[2]'
     COLLAPSE_ALL_BUTTON = '//*[@id="tree-node"]/div/button[2]'
+
+
+class RadioButtonPageLocators:
+    IMPRESSIVE_RADIOBUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='impressiveRadio']")
+    NO_RADIOBUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='noRadio']")
+    YES_RADIOBUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='yesRadio']")
+    OUTPUT_RESULT = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/p/span')
+
