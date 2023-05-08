@@ -45,10 +45,16 @@ class WebTablePageLocators:
 
     #table
     FULL_PEOPLE_LIST = (By.CSS_SELECTOR, 'div[class="rt-tr-group"]')
-
-    SEARCH_INPUT = (By.ID, 'searchBox')
+    NO_ROWS_FOUND = (By.CSS_SELECTOR, "div[class='rt-noData']")
+    SEARCH_INPUT = (By.CSS_SELECTOR, 'input[id="searchBox"]')
     DELETE_BUTTON = (By.CSS_SELECTOR, "span[title='Delete']")
     ROW_PARENT = (By.XPATH, ".//ancestor::div[@class='rt-tr-group']")
+    AMOUNT_OF_ROWS_IN_TABLE = (By.CSS_SELECTOR, 'div[class="rt-tr-group"]')
+    COUNT_ROW_LIST = (By.CSS_SELECTOR, 'select[aria-label="rows per page"]')
+
+    #update
+    UPDATE_BUTTON = (By.CSS_SELECTOR, 'span[title="Edit"]')
+
 
 
 
