@@ -23,7 +23,6 @@ class CheckBoxPageLocators:
     ITEM_LIST = (By.CSS_SELECTOR, "span[class='rct-title']")
     SELECTED_ALL = '//*[@id="result"]/span'
     EXPAND_ALL_BUTTON = (By.XPATH, '//*[@id="tree-node"]/div/button[1]')
-    COLLAPSE_ALL_BUTTON = '//*[@id="tree-node"]/div/button[2]'
 
 
 class RadioButtonPageLocators:
@@ -31,4 +30,25 @@ class RadioButtonPageLocators:
     NO_RADIOBUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='noRadio']")
     YES_RADIOBUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='yesRadio']")
     OUTPUT_RESULT = (By.XPATH, '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/p/span')
+
+
+class WebTablePageLocators:
+    #add person form
+    ADD_BUTTON = (By.ID, 'addNewRecordButton')
+    FIRST_NAME_INPUT = (By.CSS_SELECTOR, 'input[id="firstName"]')
+    LAST_NAME_INPUT = (By.CSS_SELECTOR, 'input[id="lastName"]')
+    EMAIL_INPUT = (By.CSS_SELECTOR, 'input[id="userEmail"]')
+    AGE_INPUT = (By.CSS_SELECTOR, 'input[id="age"]')
+    SALARY_INPUT = (By.CSS_SELECTOR, 'input[id="salary"]')
+    DEPARTMENT_INPUT = (By.CSS_SELECTOR, 'input[id="department"]')
+    SUBMIT = (By.CSS_SELECTOR, 'button[id="submit"]')
+
+    #table
+    FULL_PEOPLE_LIST = (By.CSS_SELECTOR, 'div[class="rt-tr-group"]')
+
+    SEARCH_INPUT = (By.ID, 'searchBox')
+    DELETE_BUTTON = (By.CSS_SELECTOR, "span[title='Delete']")
+    ROW_PARENT = (By.XPATH, ".//ancestor::div[@class='rt-tr-group']")
+
+
 
