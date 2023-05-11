@@ -61,7 +61,12 @@ class ButtonsPageLocators:
     RIGHT_CLICK_BUTTON = (By.CSS_SELECTOR, 'button[id="rightClickBtn"]')
     CLICK_ME_BUTTON = (By.XPATH, '//div[3]/button')
 
-    #message
+    # message
     DOUBLE_CLICK_MESSAGE = (By.CSS_SELECTOR, 'p[id="doubleClickMessage"]')
     RIGHT_CLICK_MESSAGE = (By.CSS_SELECTOR, 'p[id="rightClickMessage"]')
     CLICK_ME_MESSAGE = (By.CSS_SELECTOR, 'p[id="dynamicClickMessage"]')
+
+
+class LinkPageLocators:
+    SIMPL_LINK = (By.CSS_SELECTOR, 'a[id="simpleLink"]')
+    BAD_REQUEST = (By.CSS_SELECTOR, 'a[id="bad-request"]')
