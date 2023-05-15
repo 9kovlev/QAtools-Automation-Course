@@ -4,12 +4,14 @@ import random
 import time
 
 import requests
+from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 
 from generator.generator import generated_person, generated_file
 from pages.base_page import BasePage
 from locators.elements_page_locators import TextBoxLocators, CheckBoxPageLocators, RadioButtonPageLocators, \
-    WebTablePageLocators, ButtonsPageLocators, LinkPageLocators, UploadAndDownloadPageLocators
+    WebTablePageLocators, ButtonsPageLocators, LinkPageLocators, UploadAndDownloadPageLocators, \
+    DynamicPropertiesPageLocators
 
 
 class TextBoxPage(BasePage):
@@ -220,3 +222,27 @@ class UploadAndDownloadPage(BasePage):
         os.remove(path_name_file)
         return check_file
 
+
+class DynamicPropertiesPage(BasePage):
+    locators = DynamicPropertiesPageLocators()
+
+    def check_enable_button(self):
+        try:
+            self.element_is_clickable(self.locators.ENABLE_BUTTON)
+        except TimeoutException:
+            return False
+        return True
+
+    def check_changed_of_color(self):
+        color_button = self.element_is_present(self.locators.COLOR_CHANGE_BUTTON)
+        color_button_before = color_button.value_of_css_property('color')
+        time.sleep(5)
+        color_button_after = color_button.value_of_css_property('color')
+        return color_button_before, color_button_after
+
+    def check_appear_of_button(self):
+        try:
+            self.element_is_visible(self.locators.VISIBLE_AFTER_5_SEC_BUTTON)
+        except TimeoutException:
+            return False
+        return True
