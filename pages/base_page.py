@@ -23,6 +23,7 @@ class BasePage:
         return wait(self.driver, timeout).until(ЕС.presence_of_all_elements_located(locator))
 
     def element_is_visible(self, locator, timeout=5):
+        self.go_to_element(self.element_is_present(locator))
         return wait(self.driver, timeout).until(ЕС.visibility_of_element_located(locator))
 
     def element_are_visible(self, locator, timeout=5):
@@ -51,5 +52,13 @@ class BasePage:
         action = ActionChains(self.driver)
         action.click(element)
         action.perform()
+
+    def remove_footer(self):
+        self.driver.execute_script("document.getElementsByTagName('footer')[0].remove();")
+        self.driver.execute_script("document.getElementsById('close-fixedban').remove();")
+
+
+
+
 
 
