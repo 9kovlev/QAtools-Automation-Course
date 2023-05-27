@@ -14,3 +14,10 @@ class AlertsPageLocators:
     CONFIRM_RESULT = (By.CSS_SELECTOR, 'span[id="confirmResult"]')
     PROMPT_BOX_ALERT_BUTTON = (By.CSS_SELECTOR, 'button[id="promtButton"]')
     PROMPT_RESULT = (By.CSS_SELECTOR, 'span[id="promptResult"]')
+
+
+class NestedFramesPageLocators:
+    PARENT_FRAME = (By.CSS_SELECTOR, 'iframe[id="frame1"]')
+    PARENT_TEXT = (By.CSS_SELECTOR, 'body')
+    CHILD_FRAME = (By.CSS_SELECTOR, 'iframe')
+    CHILD_TEXT = (By.CSS_SELECTOR, 'p')
