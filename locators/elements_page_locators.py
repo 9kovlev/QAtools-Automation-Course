@@ -79,8 +79,12 @@ class UploadAndDownloadPageLocators:
 
 
 class DynamicPropertiesPageLocators:
-
     COLOR_CHANGE_BUTTON = (By.CSS_SELECTOR, 'button[id="colorChange"]')
     VISIBLE_AFTER_5_SEC_BUTTON = (By.CSS_SELECTOR, 'button[id="visibleAfter"]')
     ENABLE_BUTTON = (By.CSS_SELECTOR, 'button[id="enableAfter"]')
 
+
+class FramesPageLocators:
+    FIRST_FRAME = (By.CSS_SELECTOR, 'iframe[id="frame1"]')
+    SECOND_FRAME = (By.CSS_SELECTOR, 'iframe[id="frame2"]')
+    TITLE_FRAME = (By.CSS_SELECTOR, 'h1[id="sampleHeading"]')
